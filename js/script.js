@@ -16,3 +16,5 @@ console.log(integerRegex.test("asade"))
 console.log(integerRegex.test("123"))
 console.log(integerRegex.test(456))
 console.log(integerRegex.test("1asf"))
+
+//INI HASIL EDITAN
