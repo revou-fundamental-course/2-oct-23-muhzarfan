@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Suhu</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Open+Sans&family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -12,14 +15,39 @@
     </header>
     <main>
         <section class="input-section">
-            <label for="input-field">Celcius</label>
-            <input id="input-field" type="number" placeholder="0">
+            <p id="teks-tutorial">
+                Masukkan pada salah satu input di bawah (Celcius atau Fahrenheit), lalu 
+                klik "Konversi" untuk konversi suhu dari angka yang baru dimasukkan dan klik 
+                "Reset" untuk mereset semua inputan dan hasil.
+            </p>
+            <label for="suhu-atas" id="label-input">Celcius (°C):</label>
+            <input id="suhu-atas" class="input-field" type="number" placeholder="0">
+            <br>
+            <label for="suhu-bawah" id="label-input">Fahrenheit (°F):</label>
+            <input id="suhu-bawah" class="input-field" type="number" placeholder="0">
             <div id="input-button">
-                <button>Konversi</button>
-                <button>Reset</button>
-                <button>Reverse</button>
+                <button id="btn-konversi">Konversi</button>
+                <button id="btn-reset">Reset</button>
             </div>
+            <br>
+            <label for="cara-penyelesaian" >Cara Penyelesaian</label>
+            <textarea id="cara-penyelesaian" class="ini-hasil" placeholder="" readonly></textarea>
         </section>
+        <h3>Cara Konversi Dari Celcius (°C) ke Fahrenheit (°F) dan Sebaliknya</h3>
+        <hr>
+        <p>Misalkan C adalah suhu dalam satuan Celcius dan F adalah suhu dalam satuan Fahrenheit. 
+            Untuk mengubah suhu Celcius menjadi Fahrenheit, kita bisa menggunakan rumus:
+        </p>
+        <p>
+            F = (C * 9/5) + 32
+        </p>
+        <p>
+            Sedangkan untuk mengubah suhu Fahrenheit menjadi Celcius kita gunakan rumus:
+        </p>
+        <p>
+            C = 5/9 * (F - 32)
+        </p>
+
     </main>
     <script src="js/script.js"></script>
 </body>

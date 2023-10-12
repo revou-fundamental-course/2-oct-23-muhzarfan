@@ -5,6 +5,7 @@ header{
     margin-left: 100px;
     margin-right: 100px;
     border-radius: 8px;
+    font-size: 36px;
 }
 
 .input-section{
@@ -16,17 +17,17 @@ label{
     display: block;
     margin-bottom: 6px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1.6em;
 }
 
-input{
+input, textarea{
     padding: 10px;
     border: #5D12D2 solid 1px;
     border-radius: 4px;
     outline: none;
 }
 
-input:focus{
+input, textarea:focus{
     border-color: #B931FC;
 }
 
@@ -41,6 +42,7 @@ button{
     color: #113946;
     border: none;
     cursor: pointer;
+    width: 20em;
 }
 
 button:hover{
@@ -52,11 +54,42 @@ button:active{
     transform: translateY(2px);
 }
 
+hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h3{
+    font-size: 2em;
+}
+
+p{
+    font-size: 1.2em;
+}
+
 #input-button{
     display: inline-block;
     text-align: center;
 }
 
+.input-field{
+    padding: 20px;
+}
+
+.ini-hasil{
+    height: 100px;
+}
+
+.input-hasil, .ini-hasil, .input-field{
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;   
+    font-weight: bold; 
+}
+
 body{
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family: 'Kanit', sans-serif;
+}
+
+#teks-tutorial{
+    font-size: 1.3em;
 }
