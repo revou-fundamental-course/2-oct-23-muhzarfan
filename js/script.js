@@ -1,20 +1,35 @@
-const title = document.getElementById('header-title')
-const conversionButton = document.getElementById('input-button')
+let caraPenyelesaian = document.getElementById('cara-penyelesaian');
+let tombolHitung = document.getElementById('btn-konversi');
+let tombolReset = document.getElementById('btn-reset');
 
-// conversionButton.addEventListener('click', function(){
-//     title.innerHTML = "wassaf"
-// })
+let inputanAtas = document.getElementById('suhu-atas');
+let inputanBawah = document.getElementById('suhu-bawah');
 
-conversionButton.addEventListener('click', changeTitle)
+let nilai = '';
+var hasilSuhu;
 
-function changeTitle(){
-    title.innerHTML = "hello"
-}
+inputanAtas.addEventListener('click', function(){
+    nilai = 'celcius'
+});
 
-const integerRegex = /^-?\d+$/
-console.log(integerRegex.test("asade"))
-console.log(integerRegex.test("123"))
-console.log(integerRegex.test(456))
-console.log(integerRegex.test("1asf"))
+inputanBawah.addEventListener('click', function(){
+    nilai = 'fahren'
+});
 
-//INI HASIL EDITAN
+tombolHitung.addEventListener('click', function(){
+    if (nilai == 'celcius'){
+        hasilSuhu = (inputanAtas.value * 9/5) + 32;
+        inputanBawah.value = hasilSuhu;
+        caraPenyelesaian.innerText = "(" + inputanAtas.value + "°C * 9/5) + 32 = " + hasilSuhu.toFixed(1) + "°F";
+    } else if (nilai == 'fahren'){
+        hasilSuhu = 5/9 * (inputanBawah.value - 32);
+        inputanAtas.value = hasilSuhu;
+        caraPenyelesaian.innerText = "5/9 * (" + inputanBawah.value + "°F - 32) = " + hasilSuhu.toFixed(1) + "°C";
+    }
+});
+
+tombolReset.addEventListener('click', function(){
+    inputanAtas.value = '';
+    inputanBawah.value = '';
+    caraPenyelesaian.innerHTML = '';
+});
